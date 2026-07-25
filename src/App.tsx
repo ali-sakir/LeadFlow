@@ -14,12 +14,14 @@ import { AuthPage } from './components/AuthPage';
 
 export default function App() {
   const [userToken, setUserToken] = useState<string | null>(() => {
-    return localStorage.getItem('leadflow_token') || 'token-admin-123';
+    return localStorage.getItem('leadflow_token') || null;
   });
 
-  const [showAuthScreen, setShowAuthScreen] = useState<boolean>(false);
+  const [showAuthScreen, setShowAuthScreen] = useState<boolean>(() => {
+    return !localStorage.getItem('leadflow_token');
+  });
 
-  const [currentUser, setCurrentUser] = useState<User>(() => {
+  const [currentUser, setCurrentUser] = useState<User | null>(() => {
     const saved = localStorage.getItem('leadflow_user');
     if (saved) {
       try {
@@ -28,15 +30,7 @@ export default function App() {
         // fallback
       }
     }
-    return {
-      id: 'user-admin-1',
-      name: 'Sarah Connor',
-      email: 'admin@company.com',
-      role: 'admin',
-      avatarUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150',
-      department: 'Sales Management',
-      active: true
-    };
+    return null;
   });
 
   const [users, setUsers] = useState<User[]>([]);
@@ -63,10 +57,10 @@ export default function App() {
   // Get Auth Token for API Requests
   const getAuthToken = useCallback(() => {
     if (userToken) return userToken;
-    if (currentUser.role === 'admin') return 'token-admin-123';
-    if (currentUser.id === 'user-member-2') return 'token-marcus-789';
-    if (currentUser.id === 'user-member-3') return 'token-elena-101';
-    return `token-${currentUser.id}`;
+    if (currentUser?.role === 'admin') return 'token-admin-123';
+    if (currentUser?.id === 'user-member-2') return 'token-marcus-789';
+    if (currentUser?.id === 'user-member-3') return 'token-elena-101';
+    return currentUser ? `token-${currentUser.id}` : '';
   }, [currentUser, userToken]);
 
   const handleLoginSuccess = (user: User, token: string) => {
@@ -81,6 +75,7 @@ export default function App() {
     localStorage.removeItem('leadflow_token');
     localStorage.removeItem('leadflow_user');
     setUserToken(null);
+    setCurrentUser(null);
     setShowAuthScreen(true);
   };
 
@@ -329,8 +324,8 @@ export default function App() {
     return await res.json();
   };
 
-  if (showAuthScreen) {
-    return <AuthPage onLoginSuccess={handleLoginSuccess} onCancel={() => setShowAuthScreen(false)} />;
+  if (showAuthScreen || !currentUser || !userToken) {
+    return <AuthPage onLoginSuccess={handleLoginSuccess} />;
   }
 
   return (

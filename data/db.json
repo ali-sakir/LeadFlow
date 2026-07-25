@@ -45,6 +45,26 @@
       "avatarUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150",
       "department": "Enterprise Sales",
       "active": true
+    },
+    {
+      "id": "user-1784986599674-814",
+      "name": "Sakir Ali",
+      "email": "sakirali2011@gmail.com",
+      "password": "PASSword",
+      "role": "admin",
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+      "department": "Enterprise Sales",
+      "active": true
+    },
+    {
+      "id": "user-1784987744159-898",
+      "name": "Test Sales Rep",
+      "email": "rep-1784987744009@testcompany.com",
+      "password": "password123",
+      "role": "member",
+      "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150",
+      "department": "Enterprise Sales",
+      "active": true
     }
   ],
   "leads": [
@@ -144,7 +164,7 @@
       "company": "Apex Logistics Global",
       "title": "VP of Operations",
       "source": "Inbound",
-      "status": "CONTACTED",
+      "status": "QUALIFIED",
       "priority": "urgent",
       "value": 85000,
       "score": 91,
@@ -157,7 +177,7 @@
         "Urgent"
       ],
       "createdAt": "2026-07-21T13:15:50.337Z",
-      "updatedAt": "2026-07-24T13:15:50.337Z",
+      "updatedAt": "2026-07-25T13:37:28.529Z",
       "notes": [
         {
           "id": "note-2",
@@ -170,6 +190,15 @@
         }
       ],
       "activities": [
+        {
+          "id": "act-1784986648529-eiy",
+          "leadId": "lead-102",
+          "actorId": "user-1784986599674-814",
+          "actorName": "Sakir Ali",
+          "type": "status_change",
+          "description": "Status changed from CONTACTED to QUALIFIED",
+          "timestamp": "2026-07-25T13:37:28.529Z"
+        },
         {
           "id": "act-3",
           "leadId": "lead-102",
@@ -198,7 +227,7 @@
       "company": "CloudScale Inc",
       "title": "Director of IT Architecture",
       "source": "Referral",
-      "status": "QUALIFIED",
+      "status": "CONTACTED",
       "priority": "high",
       "value": 120000,
       "score": 88,
@@ -211,7 +240,7 @@
         "Enterprise"
       ],
       "createdAt": "2026-07-20T13:15:50.337Z",
-      "updatedAt": "2026-07-25T03:15:50.337Z",
+      "updatedAt": "2026-07-25T13:37:31.626Z",
       "notes": [
         {
           "id": "note-3",
@@ -224,6 +253,15 @@
         }
       ],
       "activities": [
+        {
+          "id": "act-1784986651627-jq3",
+          "leadId": "lead-103",
+          "actorId": "user-1784986599674-814",
+          "actorName": "Sakir Ali",
+          "type": "status_change",
+          "description": "Status changed from QUALIFIED to CONTACTED",
+          "timestamp": "2026-07-25T13:37:31.626Z"
+        },
         {
           "id": "act-5",
           "leadId": "lead-103",
