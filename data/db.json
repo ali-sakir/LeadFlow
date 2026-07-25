@@ -1,0 +1,336 @@
+{
+  "users": [
+    {
+      "id": "user-admin-1",
+      "name": "Sarah Connor",
+      "email": "admin@company.com",
+      "role": "admin",
+      "avatarUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150",
+      "department": "Sales Management",
+      "active": true
+    },
+    {
+      "id": "user-member-1",
+      "name": "John Doe",
+      "email": "john@company.com",
+      "role": "member",
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+      "department": "Enterprise Sales",
+      "active": true
+    },
+    {
+      "id": "user-member-2",
+      "name": "Marcus Vance",
+      "email": "marcus@company.com",
+      "role": "member",
+      "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150",
+      "department": "Mid-Market Sales",
+      "active": true
+    },
+    {
+      "id": "user-member-3",
+      "name": "Elena Rostova",
+      "email": "elena@company.com",
+      "role": "member",
+      "avatarUrl": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150",
+      "department": "Inbound Growth",
+      "active": true
+    },
+    {
+      "id": "user-1784986515605-734",
+      "name": "Test Sales Rep",
+      "email": "rep-1784986515465@testcompany.com",
+      "password": "password123",
+      "role": "member",
+      "avatarUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150",
+      "department": "Enterprise Sales",
+      "active": true
+    }
+  ],
+  "leads": [
+    {
+      "id": "lead-106",
+      "name": "Carlos Mendez",
+      "email": "carlos.m@quantix.io",
+      "phone": "+1 (555) 678-9012",
+      "company": "Quantix Systems",
+      "title": "Lead Software Architect",
+      "source": "Website",
+      "status": "NEW",
+      "priority": "medium",
+      "value": 30000,
+      "score": 65,
+      "scoreReason": "Unassigned public lead submission.",
+      "assignedToId": null,
+      "assignedToName": null,
+      "tags": [
+        "Inbound",
+        "Unassigned"
+      ],
+      "createdAt": "2026-07-25T11:15:50.337Z",
+      "updatedAt": "2026-07-25T11:15:50.337Z",
+      "notes": [],
+      "activities": [
+        {
+          "id": "act-9",
+          "leadId": "lead-106",
+          "actorId": "system",
+          "actorName": "Public Web Form",
+          "type": "created",
+          "description": "Lead captured via Public Capture Form",
+          "timestamp": "2026-07-25T11:15:50.337Z"
+        }
+      ]
+    },
+    {
+      "id": "lead-101",
+      "name": "Alex Rivera",
+      "email": "alex.rivera@nexusinnovations.com",
+      "phone": "+1 (555) 234-5678",
+      "company": "Nexus Innovations",
+      "title": "Chief Technology Officer",
+      "source": "Website",
+      "status": "NEW",
+      "priority": "high",
+      "value": 45000,
+      "score": 82,
+      "scoreReason": "High engagement on product demo request and technical specification download.",
+      "assignedToId": "user-member-1",
+      "assignedToName": "John Doe",
+      "tags": [
+        "SaaS",
+        "Cloud",
+        "High Intent"
+      ],
+      "createdAt": "2026-07-23T13:15:50.336Z",
+      "updatedAt": "2026-07-25T01:15:50.337Z",
+      "notes": [
+        {
+          "id": "note-1",
+          "leadId": "lead-101",
+          "authorId": "user-admin-1",
+          "authorName": "Sarah Connor",
+          "authorRole": "admin",
+          "content": "Submitted contact form requesting custom API deployment quotes.",
+          "createdAt": "2026-07-23T21:15:50.337Z"
+        }
+      ],
+      "activities": [
+        {
+          "id": "act-1",
+          "leadId": "lead-101",
+          "actorId": "system",
+          "actorName": "Public Web Form",
+          "type": "created",
+          "description": "Lead captured via Public Web Capture Form",
+          "timestamp": "2026-07-23T13:15:50.337Z"
+        },
+        {
+          "id": "act-2",
+          "leadId": "lead-101",
+          "actorId": "user-admin-1",
+          "actorName": "Sarah Connor",
+          "type": "assignment_change",
+          "description": "Assigned lead to John Doe",
+          "timestamp": "2026-07-24T01:15:50.337Z"
+        }
+      ]
+    },
+    {
+      "id": "lead-102",
+      "name": "Samantha Lee",
+      "email": "slee@apexlogistics.io",
+      "phone": "+1 (555) 876-5432",
+      "company": "Apex Logistics Global",
+      "title": "VP of Operations",
+      "source": "Inbound",
+      "status": "CONTACTED",
+      "priority": "urgent",
+      "value": 85000,
+      "score": 91,
+      "scoreReason": "Urgent timeline for Q3 deployment across 12 distribution hubs.",
+      "assignedToId": "user-member-2",
+      "assignedToName": "Marcus Vance",
+      "tags": [
+        "Logistics",
+        "Enterprise",
+        "Urgent"
+      ],
+      "createdAt": "2026-07-21T13:15:50.337Z",
+      "updatedAt": "2026-07-24T13:15:50.337Z",
+      "notes": [
+        {
+          "id": "note-2",
+          "leadId": "lead-102",
+          "authorId": "user-member-2",
+          "authorName": "Marcus Vance",
+          "authorRole": "member",
+          "content": "Initial discovery call went great. She requested a follow-up call with security engineers next Tuesday.",
+          "createdAt": "2026-07-24T13:15:50.337Z"
+        }
+      ],
+      "activities": [
+        {
+          "id": "act-3",
+          "leadId": "lead-102",
+          "actorId": "system",
+          "actorName": "Inbound Portal",
+          "type": "created",
+          "description": "Lead created via Inbound Webhook",
+          "timestamp": "2026-07-21T13:15:50.337Z"
+        },
+        {
+          "id": "act-4",
+          "leadId": "lead-102",
+          "actorId": "user-member-2",
+          "actorName": "Marcus Vance",
+          "type": "status_change",
+          "description": "Status changed from NEW to CONTACTED",
+          "timestamp": "2026-07-24T07:15:50.337Z"
+        }
+      ]
+    },
+    {
+      "id": "lead-103",
+      "name": "David Miller",
+      "email": "d.miller@cloudscale.net",
+      "phone": "+1 (555) 345-6789",
+      "company": "CloudScale Inc",
+      "title": "Director of IT Architecture",
+      "source": "Referral",
+      "status": "QUALIFIED",
+      "priority": "high",
+      "value": 120000,
+      "score": 88,
+      "scoreReason": "Referred by key partner. Verified budget and decision-making timeline.",
+      "assignedToId": "user-admin-1",
+      "assignedToName": "Sarah Connor",
+      "tags": [
+        "FinTech",
+        "Referral",
+        "Enterprise"
+      ],
+      "createdAt": "2026-07-20T13:15:50.337Z",
+      "updatedAt": "2026-07-25T03:15:50.337Z",
+      "notes": [
+        {
+          "id": "note-3",
+          "leadId": "lead-103",
+          "authorId": "user-admin-1",
+          "authorName": "Sarah Connor",
+          "authorRole": "admin",
+          "content": "Budget confirmed at $120k ARR. Procurement review initiated.",
+          "createdAt": "2026-07-25T03:15:50.337Z"
+        }
+      ],
+      "activities": [
+        {
+          "id": "act-5",
+          "leadId": "lead-103",
+          "actorId": "user-admin-1",
+          "actorName": "Sarah Connor",
+          "type": "created",
+          "description": "Lead created manually",
+          "timestamp": "2026-07-20T13:15:50.337Z"
+        },
+        {
+          "id": "act-6",
+          "leadId": "lead-103",
+          "actorId": "user-admin-1",
+          "actorName": "Sarah Connor",
+          "type": "status_change",
+          "description": "Status updated to QUALIFIED",
+          "timestamp": "2026-07-25T03:15:50.337Z"
+        }
+      ]
+    },
+    {
+      "id": "lead-104",
+      "name": "Rachel Green",
+      "email": "rachel@horizonfintech.com",
+      "phone": "+1 (555) 901-2345",
+      "company": "Horizon FinTech",
+      "title": "Head of Growth Strategy",
+      "source": "Event",
+      "status": "PROPOSAL_SENT",
+      "priority": "medium",
+      "value": 65000,
+      "score": 79,
+      "scoreReason": "Proposal delivered on May 14th. Waiting on internal stakeholder signoff.",
+      "assignedToId": "user-member-1",
+      "assignedToName": "John Doe",
+      "tags": [
+        "FinTech",
+        "Proposal Out"
+      ],
+      "createdAt": "2026-07-17T05:15:50.337Z",
+      "updatedAt": "2026-07-24T22:15:50.337Z",
+      "notes": [
+        {
+          "id": "note-4",
+          "leadId": "lead-104",
+          "authorId": "user-member-1",
+          "authorName": "John Doe",
+          "authorRole": "member",
+          "content": "Emailed customized proposal PDF to Rachel and CFO.",
+          "createdAt": "2026-07-24T22:15:50.337Z"
+        }
+      ],
+      "activities": [
+        {
+          "id": "act-7",
+          "leadId": "lead-104",
+          "actorId": "user-member-1",
+          "actorName": "John Doe",
+          "type": "status_change",
+          "description": "Status changed to PROPOSAL_SENT",
+          "timestamp": "2026-07-24T22:15:50.337Z"
+        }
+      ]
+    },
+    {
+      "id": "lead-105",
+      "name": "Michael Scott",
+      "email": "m.scott@dunderpaper.com",
+      "phone": "+1 (555) 432-1098",
+      "company": "Dunder Paper Co",
+      "title": "Regional Manager",
+      "source": "Cold Outreach",
+      "status": "WON",
+      "priority": "medium",
+      "value": 38000,
+      "score": 95,
+      "scoreReason": "Signed annual enterprise contract on Friday.",
+      "assignedToId": "user-member-3",
+      "assignedToName": "Elena Rostova",
+      "tags": [
+        "Paper & Retail",
+        "Closed Won"
+      ],
+      "createdAt": "2026-07-13T01:15:50.337Z",
+      "updatedAt": "2026-07-25T08:15:50.337Z",
+      "notes": [
+        {
+          "id": "note-5",
+          "leadId": "lead-105",
+          "authorId": "user-member-3",
+          "authorName": "Elena Rostova",
+          "authorRole": "member",
+          "content": "Deal closed! Contract executed for 1-year prepaid plan.",
+          "createdAt": "2026-07-25T08:15:50.337Z"
+        }
+      ],
+      "activities": [
+        {
+          "id": "act-8",
+          "leadId": "lead-105",
+          "actorId": "user-member-3",
+          "actorName": "Elena Rostova",
+          "type": "status_change",
+          "description": "Closed Deal! Status moved to WON",
+          "timestamp": "2026-07-25T08:15:50.337Z"
+        }
+      ]
+    }
+  ]
+}

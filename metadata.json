@@ -1,0 +1,6 @@
+{
+  "name": "LeadFlow - CRM & Lead Management",
+  "description": "Full-featured CRM and Lead Management application with public lead capture, role-based access control, AI scoring, lead pipeline lifecycle, and documented REST API.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
