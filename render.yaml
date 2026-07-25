@@ -1,0 +1,18 @@
+# Render Blueprint Deployment Configuration
+# Learn more at https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: leadflow-crm
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: GEMINI_API_KEY
+        sync: false

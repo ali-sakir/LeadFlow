@@ -1,13 +1,15 @@
 import express, { Request, Response, NextFunction } from 'express';
 import path from 'path';
+import cors from 'cors';
 import { createServer as createViteServer } from 'vite';
 import { GoogleGenAI, Type } from '@google/genai';
 import { db, INITIAL_LEADS, INITIAL_USERS } from './server/db';
 import { User, LeadStatus, LeadPriority, LeadSource, TestResult, Role } from './src/types';
 
 const app = express();
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000;
 
+app.use(cors());
 app.use(express.json());
 
 // Token mapping helper

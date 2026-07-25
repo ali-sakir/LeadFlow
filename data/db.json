@@ -65,6 +65,16 @@
       "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150",
       "department": "Enterprise Sales",
       "active": true
+    },
+    {
+      "id": "user-1784988642436-884",
+      "name": "Test Sales Rep",
+      "email": "rep-1784988642313@testcompany.com",
+      "password": "password123",
+      "role": "member",
+      "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150",
+      "department": "Enterprise Sales",
+      "active": true
     }
   ],
   "leads": [
